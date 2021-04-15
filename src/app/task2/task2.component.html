@@ -2,74 +2,79 @@
 <div class="container">
   <h2>Task2 </h2>
   <div style="width: 60%">
-    <div class="card">
-      <div class="card-body">
-        <p>form-1 validity is:</p>
-        <div class="card">
-          <div class="card-body">
-            <p>form-2 validity is:</p>
-            <div class="col-md-6">
-              <input type="text" class="form-control">
-            </div>
-            <br>
-            <div class="card">
-              <div class="card-body">
-                <p>form-2.1 validity is:</p>
-                <div class="col-md-6">
-                  <input type="text" class="form-control">
-                </div>
+    <form #task2Form="ngForm" (ngSubmit)="onSubmit(task2Form)">
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+          <p>form-1 validity is:</p> {{task2Form.valid}}
+          <div class="card border-primary mb-3">
+            <div class="card-body">
+              <p>form-2 validity is:</p> {{task2Form.valid}}
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="form2" ngModel>
               </div>
-            </div>
-            <br>
-            <div class="card">
-              <div class="card-body">
-                <p>form-2.2 validity is:</p>
-                <div class="col-md-6">
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-            </div>
-            <br>
-            <h4>Toggle Reactive form</h4>
-            <br>
-            <div class="card">
-              <div class="card-body">
-                <h5>Reactive form</h5>
-                <p>form-3 validity is: </p>
-                <div class="col-md-6">
-                  <input type="text" class="form-control">
-                </div>
-                <br>
-                <div class="card">
-                  <p>form-3.1 validity is:</p>
+              <br>
+              <div class="card border-primary mb-3">
+                <div class="card-body">
+                  <p>form-2.1 validity is:</p> {{task2Form.valid}}
                   <div class="col-md-6">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="form2-1" ngModel>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="card border-primary mb-3">
+                <div class="card-body">
+                  <p>form-2.2 validity is:</p> {{task2Form.valid}}
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="form2-2" ngModel>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h5>Toggle Reactive form</h5>
+              <br>
+              <div class="card border-primary mb-3">
+                <div class="card-body">
+                  <h6>Reactive form</h6>
+                  <p>form-3 validity is: </p> {{task2Form.valid}}
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="form3" ngModel>
                   </div>
                   <br>
+                  <div class="card border-primary mb-3">
+                    <p>form-3.1 validity is:</p> {{task2Form.valid}}
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="form3-1" ngModel>
+                    </div>
+                    <br>
+                  </div>
                 </div>
               </div>
-            </div>
-            <br>
-            <div class="card">
-              <div class="card-body">
-                <h5>Isolated form</h5>
-                <p>form-4 validity is: </p>
-                <div class="col-md-6">
-                  <input type="text" class="form-control">
-                </div>
-                <br>
-                <div class="card">
-                  <p>form-4.1 validity is:</p>
+              <br>
+              <div class="card border-primary mb-3">
+                <div class="card-body">
+                  <h5>Isolated form</h5>
+                  <p>form-4 validity is: </p> {{task2Form.valid}}
                   <div class="col-md-6">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="form4" ngModel>
                   </div>
                   <br>
+                  <div class="card border-primary mb-3">
+                    <p>form-4.1 validity is:</p> {{task2Form.valid}}
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="form4-1" ngModel>
+                    </div>
+                    <br>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
   </div>
 </div>
