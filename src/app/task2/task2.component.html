@@ -5,71 +5,85 @@
     <form #task2Form="ngForm" (ngSubmit)="onSubmit(task2Form)">
       <div class="card border-primary mb-3">
         <div class="card-body">
-          <p>form-1 validity is:</p> {{task2Form.valid}}
-          <div class="card border-primary mb-3">
-            <div class="card-body">
-              <p>form-2 validity is:</p> {{task2Form.valid}}
-              <div class="col-md-6">
-                <input type="text" class="form-control" name="form2" ngModel>
-              </div>
-              <br>
-              <div class="card border-primary mb-3">
-                <div class="card-body">
-                  <p>form-2.1 validity is:</p> {{task2Form.valid}}
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" name="form2-1" ngModel>
-                  </div>
+          <p>form-1 validity is: {{task2Form.touched}}</p>
+          <form #task2Form2="ngForm" (ngSubmit)="onSubmit(task2Form2)">
+            <div class="card border-primary mb-3">
+              <div class="card-body">
+                <p>form-2 validity is: {{task2Form2.touched}}</p>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" name="form2" ngModel>
                 </div>
-              </div>
-              <br>
-              <div class="card border-primary mb-3">
-                <div class="card-body">
-                  <p>form-2.2 validity is:</p> {{task2Form.valid}}
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" name="form2-2" ngModel>
-                  </div>
-                </div>
-              </div>
-              <br>
-              <h5>Toggle Reactive form</h5>
-              <br>
-              <div class="card border-primary mb-3">
-                <div class="card-body">
-                  <h6>Reactive form</h6>
-                  <p>form-3 validity is: </p> {{task2Form.valid}}
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" name="form3" ngModel>
-                  </div>
-                  <br>
+                <br>
+                <form #task2Form21="ngForm" (ngSubmit)="onSubmit(task2Form21)">
                   <div class="card border-primary mb-3">
-                    <p>form-3.1 validity is:</p> {{task2Form.valid}}
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" name="form3-1" ngModel>
+                    <div class="card-body">
+                      <p>form-2.1 validity is: {{task2Form21.touched}}</p>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" name="form2-1" ngModel>
+                      </div>
                     </div>
-                    <br>
                   </div>
-                </div>
-              </div>
-              <br>
-              <div class="card border-primary mb-3">
-                <div class="card-body">
-                  <h5>Isolated form</h5>
-                  <p>form-4 validity is: </p> {{task2Form.valid}}
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" name="form4" ngModel>
-                  </div>
-                  <br>
+                </form>
+                <br>
+                <form #task2Form22="ngForm" (ngSubmit)="onSubmit(task2Form22)">
                   <div class="card border-primary mb-3">
-                    <p>form-4.1 validity is:</p> {{task2Form.valid}}
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" name="form4-1" ngModel>
+                    <div class="card-body">
+                      <p>form-2.2 validity is: {{task2Form22.touched}}</p>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" name="form2-2" ngModel>
+                      </div>
                     </div>
-                    <br>
                   </div>
-                </div>
+                </form>
+                <br>
+                <h5>Toggle Reactive form</h5>
+                <br>
+                <form #task2Form3="ngForm" (ngSubmit)="onSubmit(task2Form3)">
+                  <div class="card border-primary mb-3">
+                    <div class="card-body">
+                      <h6>Reactive form</h6>
+                      <p>form-3 validity is: {{task2Form3.touched}}</p>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" name="form3" ngModel>
+                      </div>
+                      <br>
+                      <form #task2Form31="ngForm" (ngSubmit)="onSubmit(task2Form31)">
+                        <div class="card border-primary mb-3">
+                          <p>form-3.1 validity is: {{task2Form31.touched}}</p>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control" name="form3-1" ngModel>
+                          </div>
+                          <br>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </form>
+                <br>
+                <form #task2Form4="ngForm" (ngSubmit)="onSubmit(task2Form4)">
+                  <div class="card border-primary mb-3">
+                    <div class="card-body">
+                      <h5>Isolated form</h5>
+                      <p>form-4 validity is: {{task2Form4.touched}}</p>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" name="form4" ngModel>
+                      </div>
+                      <br>
+                      <form #task2Form41="ngForm" (ngSubmit)="onSubmit(task2Form41)">
+                        <div class="card border-primary mb-3">
+                          <p>form-4.1 validity is: {{task2Form41.touched}}</p>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control" name="form4-1" ngModel>
+                          </div>
+                          <br>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="col-sm-10">
